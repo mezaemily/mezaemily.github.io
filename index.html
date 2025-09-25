@@ -1,332 +1,122 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Md Habib Portfolio</title>
+    <title>Habib - UI/UX Designer Portfolio</title>
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&family=SUSE+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header class="hero-section">
-        <nav class="navbar">
-            <div class="logo">Md Habib Portfolio</div>
-            <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Service</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <a href="#" class="cta-button">Lets Talk</a>
-        </nav>
+    <section id="home">
+        <header>
+            <div>
+                <h1>Md Habib Portfolio</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div>
+                <button>Lets Talk</button>
+            </div>
+        </header>
 
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1>Hi, I'm Habib - <span class="highlight">UI/UX</span><br>Designer" <span class="highlight">modern vibe</span></h1>
+        <div id="content">
+            <div>
+                <h2>Hi, I'm Habib - UI/UX Designer <br> "modern vibe"</h2>
                 <p>Passionate about creating clean, user-focused designs that solve real problems and elevate digital experiences.</p>
-                <div class="hero-buttons">
-                    <button class="btn btn-primary">Hire Me</button>
-                    <button class="btn btn-secondary">Portfolio</button>
+                <div class="buttons">
+                    <button class="hire-me">Hire Me</button>
+                    <button class="portfolio">Portfolio</button>
                 </div>
             </div>
-            <div class="hero-image-container">
-                <img src="./images/habib-1.jpg" alt="Habib" class="hero-image">
-                <div class="hero-image-glow"></div>
+            <div id="image">
+                <img src="img/Image.jpg" alt="Habib">
             </div>
-        </div>
-    </header>
-
-    <div class="banner-strip">
-        <span>Design</span>
-        <span>Prototype</span>
-        <span>Design</span>
-        <span>Prototype</span>
-        <span>Design</span>
-    </div>
-
-    <section id="about" class="about-section">
-        <div class="about-image-container">
-            <img src="./images/habib-2.jpg" alt="Habib" class="about-image">
-            <div class="skill-tag skill-1">UI UX Design</div>
-            <div class="skill-tag skill-2">App design</div>
-            <div class="skill-tag skill-3">Dashboard Design</div>
-            <div class="skill-tag skill-4">Prototype</div>
-            <div class="skill-tag skill-5">Website Design</div>
-            <div class="skill-tag skill-6">UI Design</div>
-        </div>
-        <div class="about-content">
-            <h2 class="section-title">About Me</h2>
-            <h3 class="section-subtitle">Designing Interfaces That Users Love</h3>
-            <p>I'm Habib, a passionate UI/UX Designer with over 2 years of experience creating visually appealing and user-friendly interfaces for both web and mobile applications.</p>
-            <div class="skills-grid">
-                <div class="skill-item">
-                    <span>Wireframing</span>
-                    <div class="progress-bar-container"><div class="progress-bar-fill" style="width: 90%;"></div></div>
-                </div>
-                <div class="skill-item">
-                    <span>UI Design</span>
-                    <div class="progress-bar-container"><div class="progress-bar-fill" style="width: 95%;"></div></div>
-                </div>
-                <div class="skill-item">
-                    <span>UX Research</span>
-                    <div class="progress-bar-container"><div class="progress-bar-fill" style="width: 80%;"></div></div>
-                </div>
-                <div class="skill-item">
-                    <span>Prototyping</span>
-                    <div class="progress-bar-container"><div class="progress-bar-fill" style="width: 85%;"></div></div>
-                </div>
-            </div>
-            <button class="btn btn-download">Download My Resume</button>
         </div>
     </section>
 
-    <section id="services" class="services-section">
-        <h2 class="section-title">Services</h2>
-        <p class="section-description">I follow a user-centered design process ensuring every step leads to intuitive, beautiful and effective user experiences.</p>
+    ---
+
+    <section id="about">
+        <div id="about-image">
+            <img src="img/Image2.jpg" alt="Habib">
+            
+        </div>
+        <div id="about-content">
+            <h2>About Me</h2>
+            <p>Designing Interfaces That Users Love</p>
+            <p>I'm a passionate UI/UX Designer with over 3 years of experience creating visually appealing and user-friendly interfaces for both web and mobile applications.</p>
+            <div class="skill-container">
+                <div class="skill-item">
+                    <span class="skill-name">Wireframing</span>
+                    <span class="skill-percentage">90%</span>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">UI Design</span>
+                    <span class="skill-percentage">96%</span>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">UX Research</span>
+                    <span class="skill-percentage">80%</span>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">Prototyping</span>
+                    <span class="skill-percentage">56%</span>
+                </div>
+            </div>
+            <button class="download-resume">Download My Resume</button>
+        </div>
+    </section>
+
+    ---
+
+    <section id="services">
+        <div class="services-header">
+            <h2>Services</h2>
+            <p>I follow a user-centered design process ensuring every step leads to intuitive, beautiful, and effective user experiences.</p>
+        </div>
         <div class="services-grid">
             <div class="service-card">
-                <img src="./images/service-1.jpg" alt="UX Research">
-                <div class="card-content">
-                    <h3>UX Research</h3>
-                    <p>I begin by understanding the user, conducting qualitative and quantitative research and user insights.</p>
-                </div>
+                <img src="https://via.placeholder.com/300" alt="UX Research">
+                <h3>UX Research</h3>
+                <p>I begin by understanding the user through empathy, user research and user insights.</p>
             </div>
             <div class="service-card">
-                <img src="./images/service-2.jpg" alt="Wireframe">
-                <div class="card-content">
-                    <h3>Wireframe</h3>
-                    <p>I sketch low-fidelity layouts to plan the user flow and hierarchy before diving into visuals.</p>
-                </div>
+                <img src="https://via.placeholder.com/300" alt="Wireframe">
+                <h3>Wireframe</h3>
+                <p>I sketch low-fidelity layouts to plan the structure and functionality with visuals.</p>
             </div>
             <div class="service-card">
-                <img src="./images/service-3.jpg" alt="UI Design">
-                <div class="card-content">
-                    <h3>UI Design</h3>
-                    <p>I design clean, modern interfaces that align with brand and usability standards.</p>
-                </div>
+                <img src="https://via.placeholder.com/300" alt="UI Design">
+                <h3>UI Design</h3>
+                <p>I design clean, modern interfaces that are pixel-perfect and follow industry standards.</p>
             </div>
             <div class="service-card">
-                <img src="./images/service-4.jpg" alt="Prototype">
-                <div class="card-content">
-                    <h3>Prototype</h3>
-                    <p>I create interactive prototypes to test user flows and gather early, valuable feedback.</p>
-                </div>
+                <img src="https://via.placeholder.com/300" alt="Prototype">
+                <h3>Prototype</h3>
+                <p>I create interactive prototypes to test user flows and gather early, valuable feedback.</p>
             </div>
             <div class="service-card">
-                <img src="./images/service-5.jpg" alt="Design System Setup">
-                <div class="card-content">
-                    <h3>Design System Setup</h3>
-                    <p>I build scalable design systems with consistent components, typography, and colors.</p>
-                </div>
+                <img src="https://via.placeholder.com/300" alt="Design System Setup">
+                <h3>Design System Setup</h3>
+                <p>I build scalable design systems with consistent components, typography, and colors.</p>
             </div>
             <div class="service-card">
-                <img src="./images/service-6.jpg" alt="Figma to Dev Handoff">
-                <div class="card-content">
-                    <h3>Figma to Dev Handoff</h3>
-                    <p>I organize Figma files for a smooth developer handoff - with clear layers, styles.</p>
-                </div>
+                <img src="https://via.placeholder.com/300" alt="Figma to Dev Handoff">
+                <h3>Figma to Dev Handoff</h3>
+                <p>I prepare my Figma files for a smooth developer handoff - with clear layers, styles, and documentation.</p>
             </div>
         </div>
     </section>
-
-    <section class="tools-and-skills">
-        <h2 class="section-title">Tools & Skills</h2>
-        <div class="skills-list">
-            <div class="skill-item-row">
-                <img src="./images/figma-logo.png" alt="Figma">
-                <span>Figma</span>
-                <div class="progress-bar-row">
-                    <div class="progress-fill" style="width: 95%;"></div>
-                </div>
-                <span>42/52</span>
-            </div>
-            <div class="skill-item-row">
-                <img src="./images/adobexd-logo.png" alt="Adobe XD">
-                <span>Adobe XD</span>
-                <div class="progress-bar-row">
-                    <div class="progress-fill" style="width: 70%;"></div>
-                </div>
-                <span>42/52</span>
-            </div>
-            <div class="skill-item-row">
-                <img src="./images/photoshop-logo.png" alt="Photoshop">
-                <span>Photoshop</span>
-                <div class="progress-bar-row">
-                    <div class="progress-fill" style="width: 80%;"></div>
-                </div>
-                <span>42/52</span>
-            </div>
-            <div class="skill-item-row">
-                <img src="./images/illustrator-logo.png" alt="Illustrator">
-                <span>Illustrator</span>
-                <div class="progress-bar-row">
-                    <div class="progress-fill" style="width: 90%;"></div>
-                </div>
-                <span>42/52</span>
-            </div>
-        </div>
-    </section>
-
-    <section id="portfolio" class="portfolio-section">
-        <h2 class="section-title">My Portfolio</h2>
-        <h3 class="section-subtitle">Digital Product Showcases</h3>
-        <div class="portfolio-filter-nav">
-            <a href="#" class="filter-link active">All</a>
-            <a href="#" class="filter-link">Landing Pages</a>
-            <a href="#" class="filter-link">Mobile App</a>
-            <a href="#" class="filter-link">Dashboard</a>
-        </div>
-        <div class="portfolio-grid">
-            <div class="portfolio-item">
-                <img src="./images/portfolio-1.jpg" alt="Proyecto 1">
-                <div class="item-overlay">Landing Pages</div>
-            </div>
-            <div class="portfolio-item">
-                <img src="./images/portfolio-2.jpg" alt="Proyecto 2">
-                <div class="item-overlay">Mobile App</div>
-            </div>
-            <div class="portfolio-item">
-                <img src="./images/portfolio-3.jpg" alt="Proyecto 3">
-                <div class="item-overlay">Landing Pages</div>
-            </div>
-            <div class="portfolio-item">
-                <img src="./images/portfolio-4.jpg" alt="Proyecto 4">
-                <div class="item-overlay">Case Study</div>
-            </div>
-            <div class="portfolio-item">
-                <img src="./images/portfolio-5.jpg" alt="Proyecto 5">
-                <div class="item-overlay">Mobile App</div>
-            </div>
-            <div class="portfolio-item">
-                <img src="./images/portfolio-6.jpg" alt="Proyecto 6">
-                <div class="item-overlay">Landing Pages</div>
-            </div>
-        </div>
-        <button class="btn btn-view-more">View My Work</button>
-    </section>
-
-    <section class="testimonials-section">
-        <h2 class="section-title">Testimonials Section</h2>
-        <p class="section-description">Here's what my clients and collaborators say about working with me</p>
-        <div class="testimonials-grid">
-            <div class="testimonial-card">
-                <div class="card-content">
-                    <p>"Habib is a fantastic designer..."</p>
-                    <div class="client-info">
-                        <img src="./images/client-1.jpg" alt="Client 1">
-                        <div>
-                            <h4>Sabbir Mahin</h4>
-                            <span>CEO, Theme Wagon</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial-card">
-                <div class="card-content">
-                    <p>"Habib is a fantastic designer..."</p>
-                    <div class="client-info">
-                        <img src="./images/client-2.jpg" alt="Client 2">
-                        <div>
-                            <h4>Sabbir Mahin</h4>
-                            <span>CEO, Theme Wagon</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial-card">
-                <div class="card-content">
-                    <p>"Habib is a fantastic designer..."</p>
-                    <div class="client-info">
-                        <img src="./images/client-3.jpg" alt="Client 3">
-                        <div>
-                            <h4>Sabbir Mahin</h4>
-                            <span>CEO, Theme Wagon</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="pricing-section">
-        <h2 class="section-title">My Pricing Plans</h2>
-        <h3 class="section-subtitle">Choose the plan that suits you best!</h3>
-        <div class="pricing-grid">
-            <div class="pricing-card">
-                <div class="card-header">
-                    <h4>Basic Plan</h4>
-                    <h2>$29<span>/month</span></h2>
-                    <p>Good for small projects</p>
-                </div>
-                <div class="card-features">
-                    <ul>
-                        <li><span class="icon">&#10003;</span> All UI components</li>
-                        <li><span class="icon">&#10003;</span> Design system</li>
-                        <li><span class="icon">&#10003;</span> Figma and Sketch files</li>
-                        <li><span class="icon">&#10003;</span> Personal use</li>
-                    </ul>
-                </div>
-                <button class="btn btn-pricing">Get Started</button>
-            </div>
-            <div class="pricing-card">
-                <div class="card-header">
-                    <h4>Standard Plan</h4>
-                    <h2>$59<span>/month</span></h2>
-                    <p>Good for medium projects</p>
-                </div>
-                <div class="card-features">
-                    <ul>
-                        <li><span class="icon">&#10003;</span> All UI components</li>
-                        <li><span class="icon">&#10003;</span> Design system</li>
-                        <li><span class="icon">&#10003;</span> Figma and Sketch files</li>
-                        <li><span class="icon">&#10003;</span> Commercial use</li>
-                    </ul>
-                </div>
-                <button class="btn btn-pricing">Get Started</button>
-            </div>
-            <div class="pricing-card">
-                <div class="card-header">
-                    <h4>Premium Plan</h4>
-                    <h2>$99<span>/month</span></h2>
-                    <p>Good for large projects</p>
-                </div>
-                <div class="card-features">
-                    <ul>
-                        <li><span class="icon">&#10003;</span> All UI components</li>
-                        <li><span class="icon">&#10003;</span> Design system</li>
-                        <li><span class="icon">&#10003;</span> Figma and Sketch files</li>
-                        <li><span class="icon">&#10003;</span> Commercial use</li>
-                    </ul>
-                </div>
-                <button class="btn btn-pricing">Get Started</button>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="contact-section">
-        <h2 class="section-title">Get In Touch</h2>
-        <h3 class="section-subtitle">Have a project in mind? Let's talk!</h3>
-        <div class="contact-container">
-            <form action="#" class="contact-form">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" rows="5" required></textarea>
-                <button type="submit" class="btn btn-submit">Send Message</button>
-            </form>
-            <div class="contact-info">
-                <p>Feel free to reach out to me via email or social media. I'm always open to new opportunities and collaborations.</p>
-                <p>Email: yourmail@example.com</p>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <p>&copy; 2024 Md Habib. All rights reserved.</p>
-    </footer>
-
 </body>
 </html>
