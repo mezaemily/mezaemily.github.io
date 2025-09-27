@@ -51,7 +51,7 @@ h1, h2, h3, h4, .subtitle {
 
 /* Animación de destello suave en el cuerpo */
 body::before {
-    content: '';
+    content:”;
     position: fixed;
     top: 50%;
     left: 50%;
