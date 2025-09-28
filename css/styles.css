@@ -4,7 +4,8 @@
 }
 body{
     font-family: "Roboto", sans-serif;
-    background: linear-gradient(135deg, #0A0014 0%, #1B0036 50%, #31004d 100%);
+  background: #3e076e;
+background: radial-gradient(circle, rgba(62, 7, 110, 1) 0%, rgba(89, 0, 179, 1) 100%);
     color: white;
      overflow-x: hidden;
 }
@@ -17,7 +18,8 @@ body{
 }
 body {
     font-family: "Roboto", sans-serif;
-    background: linear-gradient(135deg, #0A0014 0%, #1B0036 50%, #31004d 100%);
+background: #35025e;
+background: radial-gradient(circle, rgba(53, 2, 94, 1) 0%, rgba(28, 5, 56, 1) 100%);
     color: white;
     overflow-x: hidden;
 }
@@ -31,7 +33,7 @@ body {
 .button:hover, .filter-btn:hover, .view-more-btn:hover, .purchase-btn:hover,
 .portfolio-item:hover, .service-card:hover, .skill-card:hover, .testimonial-card:hover {
     box-shadow: 0 0 20px rgba(142, 0, 255, 0.8);
-    transform: translateY(-5px);
+    /*transform: translateY(-5px);*/
 }
 
 /* Brillo sutil en los títulos */
@@ -59,7 +61,7 @@ body::before {
     height: 250px;
     background: radial-gradient(circle, rgba(142, 0, 255, 0.15) 0%, transparent 70%);
     border-radius: 50%;
-    transform: translate(-50%, -50%);
+   /* transform: translate(-50%, -50%);*/
     pointer-events: none;
            animation: slowPulse 5s infinite ease-in-out;
     z-index: -2;
@@ -167,30 +169,6 @@ section#home #content h2{
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); 
     border: 5px solid #8c00ff; 
     margin-top: 10%;
-}
-.morada {/*
-    position: absolute;            
-    left: 0;
-    width: 100%;
-    height: 50px;                 
-    background-color: #8c00ff;
-    z-index: 5;        */          
-}
-
-.cinta {/*
-    position: relative;
-    background-color: #ffc107;
-    color: #000;
-    font-weight: bold;
-    font-size: 1.2rem;
-    padding: 10px 0;
-    width: 120%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    left: -10%;
-    transform: rotate(-3deg);      
-    z-index: 10;   */                
 }
 
 
@@ -310,7 +288,7 @@ button {
 }
 
 button:hover {
-    transform: scale(1.05);
+    /*transform: scale(1.05);*/
 }
 
 @media (max-width: 768px) {
@@ -365,8 +343,8 @@ button:hover {
 }
 
 .service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+     transform: none;
+    box-shadow: none;
 }
 
 .service-card img {
@@ -480,7 +458,7 @@ button:hover {
     position: absolute;
     top: 50%;
     right: 10px;
-    transform: translateY(-50%);
+    /*transform: translateY(-50%);*/
     font-size: 0.9rem;
     color: white;
 }
@@ -491,7 +469,7 @@ button:hover {
     position: absolute;
     top: 50%;
     right: -25px;
-    transform: translateY(-50%);
+    /*transform: translateY(-50%);*/
     color: #ccc;
     font-size: 1rem;
 }
@@ -583,7 +561,7 @@ button:hover {
 }
 
 .portfolio-item:hover .item-overlay {
-    transform: translateY(0);
+   transform: translateY(0);
 }
 
 .item-overlay .category {
@@ -823,11 +801,11 @@ button:hover {
 .pricing-card.standard-plan {
     background: linear-gradient(135deg, #8c00ff, #ff00ff);
     border: none;
-    transform: scale(1.05);
+    /*transform: scale(1.05);*/
 }
 
 .pricing-card.standard-plan:hover {
-    transform: scale(1.1);
+    /*transform: scale(1.1);*/
 }
 
 .pricing-card.standard-plan .price {
@@ -1096,12 +1074,20 @@ position: absolute;
 }
 
 .news-container {
-    display: flex;
+    width: 300%;
+     display: flex;
+    flex-direction: column; /* Apilar los items en columna */
+    align-items: center;    /* Centrar horizontalmente */
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    
+    /*display: flex;
     justify-content: center;
     gap: 30px;
     flex-wrap: wrap;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 auto;*/
 }
 
 .news-item {
@@ -1118,7 +1104,7 @@ position: absolute;
 }
 
 .news-item:hover {
-    transform: translateY(-5px);
+    /*transform: translateY(-5px);*/
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -1342,7 +1328,7 @@ position: absolute;
 .button:hover, .filter-btn:hover, .view-more-btn:hover, .purchase-btn:hover,
 .portfolio-item:hover, .service-card:hover, .skill-card:hover, .testimonial-card:hover {
     box-shadow: 0 0 20px rgba(142, 0, 255, 0.8);
-    transform: translateY(-5px);
+    /*transform: translateY(-5px);*/
 }
 
 /* Brillo sutil en los títulos */
