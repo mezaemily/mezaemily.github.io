@@ -1,0 +1,44 @@
+/* Contenedor principal con fondo */
+#escenario {
+    position: relative;       
+    width: 800px;             
+    height: 400px;           
+    margin: 0 auto;           
+    border: 2px solid #000;   
+    overflow: hidden;         
+
+    /* Fondo mediante CSS */
+    background-image: url('animaciones/img/bg.jpg'); 
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Personaje con tus coordenadas */
+#personaje{
+    position: absolute;
+    top: 40px;
+    left: 120px;
+    width: 200px;
+}
+
+/* Barriles */
+#barril1, #barril2 {
+    position: absolute;
+    width: 50px;              /* Ajusta según tu imagen */
+    height: 70px;          /* Ajusta según tu imagen */
+    z-index: 1;              /* Encima del fondo */
+}
+
+/* Posiciones individuales de los barriles */
+#barril1 {
+    top: 200px;
+    left: 300px;
+}
+
+#barril2 {
+    top: 200px;
+    left: 500px;
+}
+
+
+

@@ -24,11 +24,7 @@ background: radial-gradient(circle, rgba(53, 2, 94, 1) 0%, rgba(28, 5, 56, 1) 10
     overflow-x: hidden;
 }
 
-/* Efectos de brillo ligeros para elementos de destaque */
-.button, .filter-btn, .view-more-btn, .purchase-btn, .portfolio-item, .service-card, .skill-card, .testimonial-card, .morada {
-    /*box-shadow: 0 0 10px rgba(142, 0, 255, 0.4);*/
-   
-}
+
 
 .button:hover, .filter-btn:hover, .view-more-btn:hover, .purchase-btn:hover,
 .portfolio-item:hover, .service-card:hover, .skill-card:hover, .testimonial-card:hover {
