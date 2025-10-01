@@ -1,44 +1,89 @@
-/* Contenedor principal con fondo */
-#escenario {
-    position: relative;       
-    width: 800px;             
-    height: 400px;           
-    margin: 0 auto;           
-    border: 2px solid #000;   
-    overflow: hidden;         
-
-    /* Fondo mediante CSS */
-    background-image: url('animaciones/img/bg.jpg'); 
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-/* Personaje con tus coordenadas */
-#personaje{
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    overflow: hidden;
+  }
+  
+  
+  #contenedor {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: url("../img/bg.jpg") no-repeat center/cover;
+    overflow: hidden;
+  }
+  
+  /* EL BANANAS*/
+  #personaje {
     position: absolute;
-    top: 40px;
-    left: 120px;
+    bottom: 58%;   /* altura */
+    left: 8%;      
     width: 200px;
-}
+    height: 200px;
+    background: url("../img/dk.png") no-repeat center/contain;
 
-/* Barriles */
-#barril1, #barril2 {
+    animation-name: saltos;
+    animation-duration: 10s;
+
+  }
+  
+  
+  #barril1 {
     position: absolute;
-    width: 50px;              /* Ajusta según tu imagen */
-    height: 70px;          /* Ajusta según tu imagen */
-    z-index: 1;              /* Encima del fondo */
-}
+    bottom: 13%;   /* altura */
+    left: 10%;    
+    width: 160px;
+    height: 160px;
+    background: url("../img/barril.png") no-repeat center/contain;
+    transform: rotate(-15deg);
+  }
+  
+  
+  #barril2 {
+    position: absolute;
+    bottom: 14%;   /*altura */
+    right: 10%;   
+    width: 160px;
+    height: 160px;
+    background: url("../img/barril.png") no-repeat center/contain;
+  }
+  .giroBarril{
+    animation-name: rotarBarril;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+  @keyframes rotarBarril{
+    from{
 
-/* Posiciones individuales de los barriles */
-#barril1 {
-    top: 200px;
-    left: 300px;
-}
-
-#barril2 {
-    top: 200px;
-    left: 500px;
-}
-
+        transform: rotate(-80deg);
+    }
+    to{
+        transform: rotate(80deg);
+    }
+  }
+  @keyframes saltos{
+    0%{
+        top:-250px;
+    }
+    10%{
+        top: 80px;
+    }
+    50%{
+        top:80px;
+        
+    }
+    70%{
+        top: 150px;
+    }
+    100%{
+        left: 700px;
+        top: 240px;
+    }
+  }
 
 
