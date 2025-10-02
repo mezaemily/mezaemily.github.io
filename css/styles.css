@@ -413,7 +413,8 @@ background: radial-gradient(circle, rgba(109, 21, 161, 1) 0%, rgba(71, 14, 99, 1
 
 .progress-bar-inner {
     height: 100%;
-    background: linear-gradient(90deg, #8c00ff, #ff00ff);
+   background: #6d15a1;
+background: radial-gradient(circle, rgba(109, 21, 161, 1) 0%, rgba(71, 14, 99, 1) 100%);
     border-radius: 10px;
 }
 
@@ -473,8 +474,8 @@ background: radial-gradient(circle, rgba(109, 21, 161, 1) 0%, rgba(71, 14, 99, 1
 }
 
 .filter-btn:hover, .filter-btn.active {
-    background: linear-gradient(90deg, #8c00ff, #ff00ff);
-    border-color: transparent;
+    background: #6d15a1;
+background: radial-gradient(circle, rgba(109, 21, 161, 1) 0%, rgba(71, 14, 99, 1) 100%);
     color: azure;
 }
 
@@ -553,7 +554,8 @@ background: radial-gradient(circle, rgba(109, 21, 161, 1) 0%, rgba(71, 14, 99, 1
     border-radius: 25px;
     cursor: pointer;
     transition: transform 0.2s ease; 
-    background: linear-gradient(90deg, #8c00ff, #ff00ff);
+  background: #6d15a1;
+background: radial-gradient(circle, rgba(109, 21, 161, 1) 0%, rgba(71, 14, 99, 1) 100%);
 }
 
 .view-more-btn:hover {
@@ -762,7 +764,8 @@ background: radial-gradient(circle, rgba(109, 21, 161, 1) 0%, rgba(71, 14, 99, 1
 }
 
 .pricing-card.standard-plan {
-    background: linear-gradient(135deg, #8c00ff, #ff00ff);
+    background: #6d15a1;
+background: radial-gradient(circle, rgba(109, 21, 161, 1) 0%, rgba(71, 14, 99, 1) 100%);
     border: none;
     
 }
@@ -807,7 +810,8 @@ background: radial-gradient(circle, rgba(109, 21, 161, 1) 0%, rgba(71, 14, 99, 1
 }
 
 .pricing-card:not(.standard-plan) .purchase-btn {
-    background: linear-gradient(90deg, #8c00ff, #ff00ff);
+    background: #6d15a1;
+background: radial-gradient(circle, rgba(109, 21, 161, 1) 0%, rgba(71, 14, 99, 1) 100%);
 }
 
 .pricing-card.standard-plan .purchase-btn {
@@ -1065,7 +1069,8 @@ font-size: 2.5rem;
     position: absolute;
     top: 0;
     left: 0;
-  background: linear-gradient(90deg, #8c00ff, #ff00ff);
+  background: #6d15a1;
+background: radial-gradient(circle, rgba(109, 21, 161, 1) 0%, rgba(71, 14, 99, 1) 100%);
     color: azure;
     padding: 10px 20px;
     border-bottom-right-radius: 15px;
