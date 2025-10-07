@@ -1,0 +1,21 @@
+/*regla de diseño para tablets*/
+/*rango de dimenciones de pantalla*/
+@media(min-width: 600px) and (max-width: 1023px){
+    header{
+        background-color:green;
+
+    }
+    section {
+    grid-template-columns: repeat(2, 1fr);/*2 rejillas y abajo 2*/
+    }
+    /*REGLAS DE DISE;O PARA cel*/
+}
+@media(max-width: 599px) {
+    header{
+        background-color: plum;
+
+    }
+    section {
+    grid-template-columns: repeat(1, 1fr);/*1 rejillas y abajo 1*/
+    }
+}
