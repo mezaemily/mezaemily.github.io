@@ -53,17 +53,63 @@ body {
     font-size: 1.8rem;
 }
 /*---rectangle-----*/
-/* Rectángulo blanco debajo de los pasteles */
-.hero::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 200px;        /* Altura del rectángulo blanco */
-  background-color: white;
-  z-index: 1;
+/* ---------- HERO ---------- */
+.hero {
+    position: relative; /* necesario para position: absolute de los pasteles */
+    height: 850px;
+    text-align: center;
+    padding: 12rem 2rem;
+    background: radial-gradient(circle, rgba(245, 206, 225, 1) 0%, rgba(219, 197, 211, 1) 62%, rgba(214, 178, 198, 1) 82%, rgba(117, 117, 117, 1) 100%);
 }
+
+/* Rectángulo blanco detrás de los pasteles */
+.hero::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background-color: white;
+    z-index: 1; /* atrás de los pasteles */
+}
+
+/* ---------- CAKES ---------- */
+.cakes img {
+    position: absolute;
+    bottom: 60px; /* altura sobre el rectángulo */
+    width: 200px;
+    border-radius: 50%; /* sombra envolvente circular */
+    z-index: 3;
+    box-shadow: 0px 25px 40px rgba(0, 0, 0, 0.45); /* sombra alrededor */
+}
+
+/* Posiciones individuales */
+.cake-left {
+    left: 10%;
+    width: 250px !important;
+    bottom: 10px;
+}
+
+.cake-center {
+    left: 30%;
+    transform: translateX(-10%);
+    width: 210px !important;
+    bottom: 60px;
+}
+
+.cake-right {
+    right: 0%;
+    width: 500px !important;
+    bottom: 60px;
+}
+/* 👇 elimina completamente cualquier interacción al pasar el mouse */
+
+
+
+
+
+
 
 
 /* ---------- HERO SECTION ---------- */
@@ -115,12 +161,12 @@ background: radial-gradient(circle, rgba(245, 206, 225, 1) 0%, rgba(219, 197, 21
 
 .cakes img {
     width: 180px;
-    border-radius: 10px;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    border-radius: 50px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0);
 }
 
 /* Ajusta según las imágenes */
-.cake-left { transform: translateY(20px); }
+.cake-left { transform: translateY(10px); }
 .cake-center { transform: translateY(40px); }
 .cake-right { transform: translateY(10px); }
 
@@ -158,7 +204,9 @@ background: radial-gradient(circle, rgba(245, 206, 225, 1) 0%, rgba(219, 197, 21
     object-fit: cover;
     border-radius: 12px;
     margin-bottom: 1rem;
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.4); /* 👈 sombra gris pronunciada */
 }
+
 
 .producto h3 {
     color: #5a2c3a;
