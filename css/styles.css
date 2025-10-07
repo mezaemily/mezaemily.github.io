@@ -52,22 +52,37 @@ body {
     color:var(--letras);
     font-size: 1.8rem;
 }
+/*---rectangle-----*/
+/* Rectángulo blanco debajo de los pasteles */
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;        /* Altura del rectángulo blanco */
+  background-color: white;
+  z-index: 1;
+}
+
 
 /* ---------- HERO SECTION ---------- */
 .hero {
+    height: 850px;
     text-align: center;
-    padding: 4rem 2rem;
+    padding: 12rem 2rem;
     background: #f5cee1;
 background: radial-gradient(circle, rgba(245, 206, 225, 1) 0%, rgba(219, 197, 211, 1) 62%, rgba(214, 178, 198, 1) 82%, rgba(117, 117, 117, 1) 100%);
     position: relative;
 }
 
 .hero-text h2 {
-    font-size: 3.5rem;
+    font-size: 4.0rem;
     color: var(--letras);
     text-shadow: 3px 3px 5px rgba(0,0,0,0.2);
     margin-bottom: 1rem;
     font-family: 'Great Vibes';
+
 }
 
 .hero-text p {
