@@ -1,21 +1,73 @@
-/*regla de diseño para tablets*/
-/*rango de dimenciones de pantalla*/
-@media(min-width: 600px) and (max-width: 1023px){
-    header{
-        background-color:green;
+/* =========================
+   MÓVIL: <=767px
+   ========================= */
+@media (max-width: 767px) {
+  /* ocultar enlaces del header, mantener logo */
+  .navbar .nav-links { display: none; }
 
-    }
-    section {
-    grid-template-columns: repeat(2, 1fr);/*2 rejillas y abajo 2*/
-    }
-    /*REGLAS DE DISE;O PARA cel*/
+  /* logo centrado */
+  .navbar .logo { 
+    display: block;
+    font-size: 1.9rem;
+    text-align: center;
+    margin: 1rem auto 0;
+    position: relative;
+  }
+
+  /* HERO */
+  .hero { padding: 6.5rem 1rem 2rem; }
+  .hero-text h2 { font-size: 2.6rem; text-shadow: 4px 5px 8px rgba(0,0,0,0.32); }
+  .hero-text p { font-size: 1rem; padding: 0 1rem; }
+
+  /* PASTELES */
+  .cakes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .cake-left { 
+    display: block;
+    width: 220px;
+    transform: translateY(0);
+  }
+
+  .cake-center { 
+    display: block;
+    width: 220px;
+    transform: translateY(0);
+  }
+
+  .cake-right { display: none; } /* oculto */
+
+  /* RECTÁNGULO BLANCO */
+  .hero::after { height: 280px; bottom: -5px; }
+
+  /* CATÁLOGO */
+  .catalogo-grid { grid-template-columns: 1fr; max-width: 420px; }
+  .btn { padding: 0.6rem 1.3rem; font-size: 0.95rem; }
 }
-@media(max-width: 599px) {
-    header{
-        background-color: plum;
 
-    }
-    section {
-    grid-template-columns: repeat(1, 1fr);/*1 rejillas y abajo 1*/
-    }
+/* =========================
+   TABLET: 768px - 1024px
+   ========================= */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .navbar { display: flex; padding: 1.2rem 2rem; }
+  .logo { font-size: 2.4rem; top: 4px; }
+
+  .hero { padding: 7.5rem 2rem 2rem; }
+  .hero-text h2 { font-size: 3.4rem; text-shadow: 5px 6px 9px rgba(0,0,0,0.34); }
+  .hero-text p { font-size: 1.1rem; }
+
+  /* PASTELES posicionados a los lados */
+  .cakes img { position: absolute; filter: drop-shadow(0 8px 22px rgba(0,0,0,0.33)); }
+  
+  .cake-left  { left: 10%; width: 240px; bottom: 40px; display: block; }
+  .cake-center{ display: none; } /* oculto */
+  .cake-right { right: 10%; width: 360px; bottom: 40px; display: block; }
+
+  /* CATÁLOGO */
+  .catalogo-grid { grid-template-columns: repeat(2, 1fr); max-width: 900px; }
+  .producto img { width: 90%; margin: 0 auto; display:block; }
 }
