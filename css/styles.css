@@ -7,6 +7,8 @@
     --card: #ffffff;
     --accent:#3b82fb;
     --radius: 8px;
+    --cake-left-bottom: 120px;   /* altura por defecto */
+  --cake-left-rotate: -15deg;  /* rotación por defecto */
 
 }
 * {

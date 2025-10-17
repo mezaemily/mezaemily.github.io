@@ -1,7 +1,8 @@
 /* =========================
-   MÓVIL: <=767px
+   CELULAR: hasta 767px
    ========================= */
 @media (max-width: 767px) {
+
   /* ocultar enlaces del header, mantener logo */
   .navbar .nav-links { display: none; }
 
@@ -15,38 +16,75 @@
   }
 
   /* HERO */
-  .hero { padding: 6.5rem 1rem 2rem; }
-  .hero-text h2 { font-size: 2.6rem; text-shadow: 4px 5px 8px rgba(0,0,0,0.32); }
-  .hero-text p { font-size: 1rem; padding: 0 1rem; }
+  .hero { 
+    padding: 6.5rem 1rem 2rem; 
+  }
+  .hero-text h2 { 
+    font-size: 2.6rem; 
+    text-shadow: 4px 5px 8px rgba(0,0,0,0.32); 
+  }
+  .hero-text p { 
+    font-size: 1rem; 
+    padding: 0 1rem; 
+  }
 
-  /* PASTELES */
+  /* CONTENEDOR DE PASTELES */
   .cakes {
+    position: relative;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 1rem;
+    overflow: visible;
   }
 
+  /* Variables globales para cake-left */
+  :root {
+    --cake-left-bottom: 150px;   /* altura inicial, cambia para subir/bajar */
+    --cake-left-rotate: -20deg;   /* inclinación, cambia para rotar */
+  }
+
+  /* 🍰 Cake-left con altura y rotación ajustables */
   .cake-left { 
-    display: block;
-    width: 220px;
-    transform: translateY(0);
+    position: absolute;
+    width: 240px !important;
+    left: 35%; 
+    bottom: var(--cake-left-bottom); /* altura controlable */
+    transform: translateX(-50%) rotate(var(--cake-left-rotate)) scale(0.95); /* rotación controlable */
+    opacity: 0.9;
+    filter: drop-shadow(0 6px 14px rgba(0,0,0,0.25));
+    z-index: 0;
   }
 
-  .cake-center { 
-    display: block;
-    width: 220px;
-    transform: translateY(0);
+  /* 🍰 Cake-right visible en celular */
+  .cake-right { 
+    position: absolute;
+    width: 220px !important;
+    right: 15%; 
+    bottom: 100px;
+    transform: rotate(10deg) scale(0.95);
+    opacity: 0.9;
+    filter: drop-shadow(0 6px 14px rgba(0,0,0,0.25));
+    z-index: 0;
   }
 
-  .cake-right { display: none; } /* oculto */
+  /* Ocultar solo el pastel central */
+  .cake-center { display: none; }
 
   /* RECTÁNGULO BLANCO */
-  .hero::after { height: 280px; bottom: -5px; }
+  .hero::after { 
+    height: 280px; 
+    bottom: -5px; 
+  }
 
   /* CATÁLOGO */
-  .catalogo-grid { grid-template-columns: 1fr; max-width: 420px; }
-  .btn { padding: 0.6rem 1.3rem; font-size: 0.95rem; }
+  .catalogo-grid { 
+    grid-template-columns: 1fr; 
+    max-width: 420px; 
+  }
+  .btn { 
+    padding: 0.6rem 1.3rem; 
+    font-size: 0.95rem; 
+  }
 }
 
 /* =========================
