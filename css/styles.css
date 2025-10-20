@@ -55,6 +55,20 @@ body {
     color:var(--letras);
     font-size: 1.8rem;
 }
+.logo i {
+    margin-right: 10px;       /* espacio entre ícono y texto */
+    color:var(--letras);           /* color rosa, opcional */
+    font-size: 1.77rem;        /* ajusta según tu logo */
+    vertical-align: middle;   /* alinea con el texto */
+}
+.nav-links a i {
+    margin-right: 5px;         /* separa el ícono del texto */
+    vertical-align: middle;    /* alinea con el texto */
+    font-size: 1rem;           /* tamaño del ícono */
+    color: var(--letras);      /* mismo color que los enlaces */
+}
+
+
 /*---rectangle-----*/
 /* ---------- HERO ---------- */
 .hero {
@@ -133,14 +147,16 @@ background: radial-gradient(circle, rgba(240, 204, 204, 1) 0%, rgba(153, 125, 12
 
 
 .hero-text h2 {
-    font-size: 5.0rem;
+    font-family: 'Great Vibes', cursive; /* misma fuente que el logo */
+    font-size: 5rem;                     /* ajusta según tu diseño */
     color: var(--letras);
-    text-shadow: 3px 3px 5px rgba(0,0,0,0.2);
-    margin-bottom: 1rem;
-    font-family: 'Great Vibes';
-
+    text-shadow: 3px 3px 5px rgba(0,0,0,0.2); /* sombra suave */
+    line-height: 1.2;                    /* espacio entre líneas */
 }
-
+.hero-text h2 {
+    letter-spacing: 0.5px;
+    text-shadow: 4px 4px 6px rgba(0,0,0,0.2);
+}
 .hero-text p {
     color: var(--letras);
     margin-bottom: 2rem;
@@ -154,7 +170,9 @@ background: radial-gradient(circle, rgba(240, 204, 204, 1) 0%, rgba(153, 125, 12
     text-decoration: none;
     font-weight: 600;
     transition: background 0.3s;
+    border-radius: 55px;
 }
+
 
 .btn:hover {
     background-color:var(--letras);
