@@ -207,7 +207,7 @@
   }
   .producto .btn {
     display: inline-block;
-    background-color: #f3a8b8;
+    background-color: var(--letras);
     color: white;
     padding: 0.6rem 1.3rem;
     border-radius: 20px;
