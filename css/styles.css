@@ -38,7 +38,7 @@ body {
     display: flex;
     gap: 2rem;
 }
-
+/*
 .nav-links a {
     text-decoration: none;
     color: var(--letras);
@@ -49,18 +49,52 @@ body {
 .nav-links a:hover {
     color:var(--btn);
 }
+*/
+.nav-links a {
+  text-decoration: none;
+  color: var(--letras);
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--btn);
+}
+
+/* 🔹 SVG dentro de los enlaces del menú (como CONTACTO) */
+.nav-links a svg {
+  width: 18px;
+  height: 18px;
+  fill: var(--letras);   /* mismo color que el texto */
+  vertical-align: middle;
+  margin-right: 6px;     /* separación del texto */
+  transition: fill 0.3s; /* suaviza el cambio de color */
+}
+
+/* 🔹 Cuando se pasa el mouse, cambia el color del ícono igual que el texto */
+.nav-links a:hover svg {
+  fill: var(--btn);
+}
 
 .logo {
     font-family: 'Great Vibes', cursive;
     color:var(--letras);
     font-size: 1.8rem;
 }
-.logo i {
-    margin-right: 10px;       /* espacio entre ícono y texto */
-    color:var(--letras);           /* color rosa, opcional */
-    font-size: 1.77rem;        /* ajusta según tu logo */
-    vertical-align: middle;   /* alinea con el texto */
+.logo svg {
+  width: 28px;              /* 🔹 tamaño del ícono */
+  height: 28px;
+  fill: var(--letras);      /* 🔹 color igual que el texto */
+  vertical-align: middle;   /* 🔹 alineado con el texto “Dulce Encanto” */
+  margin-right: 10px;       /* 🔹 espacio entre ícono y texto */
+  transition: fill 0.3s ease;
 }
+
+/* Opcional: efecto al pasar el mouse por el logo */
+.logo:hover svg {
+  fill: var(--btn);
+}
+
 .nav-links a i {
     margin-right: 5px;         /* separa el ícono del texto */
     vertical-align: middle;    /* alinea con el texto */
