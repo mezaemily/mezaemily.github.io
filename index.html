@@ -1,14 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/styles.css">
-    <link rel="stylesheet" href="./css/mediaquerys.css">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dulce Encanto</title>
+
+  <!-- 🌐 Preconexiones primero (ayuda a cargar más rápido fuentes externas) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- 🪶 Fuentes optimizadas (preload + fallback para sin JS) -->
+  <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;600&display=swap"
+        as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;600&display=swap">
+  </noscript>
+
+  <!-- 🎨 CSS crítico embebido -->
+  <style>
+    /* Estilos esenciales del inicio (navbar, hero, logo) */
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #fff;
+      color: #894962;
+    }
+
+    .navbar, .hero, .logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .navbar {
+      padding: 1.2rem 2rem;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+      background: #fff;
+    }
+
+    .logo {
+      font-family: 'Great Vibes', cursive;
+      font-size: 1.8rem;
+      color: #894962;
+    }
+
+    .hero {
+      height: 70vh;
+      background: radial-gradient(circle, rgba(251,197,197,1) 0%, rgba(149,117,117,1) 100%);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 2rem;
+    }
+  </style>
+
+  <!-- 📦 Hojas de estilo externas (no críticas) -->
+ <link rel="stylesheet" href="./css/main.min.css">
+
+  <!-- 🧩 Iconos FontAwesome -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
 </head>
+
 <body>
     <header>
         <nav class="navbar">
@@ -45,7 +105,8 @@
         <div class="cakes">
   <picture>
   
-    <img src="./img/cake1 (1).webp" alt="Pastel 1" class="cake-left" loading="lazy">
+    <img src="./img/cake1 (1).webp" alt="Pastel 1" class="cake-left" fetchpriority="high" decoding="async">
+
   </picture>
 
   <picture>
