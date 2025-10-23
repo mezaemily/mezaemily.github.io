@@ -1,141 +1,202 @@
- :root
- {--btn:#F09BA2;
-  --letras:#894962;
-  --bg: #f7f7fb;
-  --card: #ffffff;
-  --accent:#3b82fb;
-  --radius: 8px;
-  --cake-left-bottom: 120px;
-  --cake-left-rotate: -15deg;}
- *
-  {margin: 0;
+:root{/*declarar variables*/
+
+    --btn:#F09BA2;
+    --letras:#894962;
+    --bg: #f7f7fb;
+    --card: #ffffff;
+    --accent:#3b82fb;
+    --radius: 8px;
+    --cake-left-bottom: 120px;   /* altura por defecto */
+  --cake-left-rotate: -15deg;  /* rotación por defecto */
+
+}
+* {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
- body {
-  font-family: 'Poppins', sans-serif;
-  background-color: var(--card);
-  color: var(--letras);
 }
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--card);
+    color: var(--letras);
+}
+
+/* ---------- NAVBAR ---------- */
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center
-  ;padding: 1.5rem 3rem;
-  background-color: var(--card);
-  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 3rem;
+    background-color: var(--card);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
 }
+
 .nav-links {
-  list-style: none;
-  display: flex;
-  gap: 2rem;
+    list-style: none;
+    display: flex;
+    gap: 2rem;
 }
+/*
+.nav-links a {
+    text-decoration: none;
+    color: var(--letras);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color:var(--btn);
+}
+*/
 .nav-links a {
   text-decoration: none;
   color: var(--letras);
   font-weight: 600;
   transition: color 0.3s;
 }
-  .nav-links a:hover {
-    color: var(--btn);
-  }
-  .nav-links a svg {
-    width: 18px;
-    height: 18px;
-    fill: var(--letras);
-    vertical-align: middle;
-    margin-right: 6px;
-    transition: fill 0.3s;
-  }
-  .nav-links a:hover svg {
-    fill: var(--btn);
-  }
-  .logo {
+
+.nav-links a:hover {
+  color: var(--btn);
+}
+
+/* 🔹 SVG dentro de los enlaces del menú (como CONTACTO) */
+.nav-links a svg {
+  width: 18px;
+  height: 18px;
+  fill: var(--letras);   /* mismo color que el texto */
+  vertical-align: middle;
+  margin-right: 6px;     /* separación del texto */
+  transition: fill 0.3s; /* suaviza el cambio de color */
+}
+
+/* 🔹 Cuando se pasa el mouse, cambia el color del ícono igual que el texto */
+.nav-links a:hover svg {
+  fill: var(--btn);
+}
+
+.logo {
     font-family: 'Great Vibes', cursive;
     color:var(--letras);
     font-size: 1.8rem;
-  }
-  .logo svg {
-    width: 28px;
-    height: 28px;
-    fill: var(--letras);
-    vertical-align: middle;
-    margin-right: 10px;
-    transition: fill 0.3s ease;
-  }
-  .logo:hover svg {
-    fill: var(--btn);
-  }
-  .nav-links a i {
-    margin-right: 5px;
-    vertical-align: middle;
-    font-size: 1rem;
-    color: var(--letras);
-  }
-  .hero {
-    position: relative;
+}
+.logo svg {
+  width: 28px;              /* 🔹 tamaño del ícono */
+  height: 28px;
+  fill: var(--letras);      /* 🔹 color igual que el texto */
+  vertical-align: middle;   /* 🔹 alineado con el texto “Dulce Encanto” */
+  margin-right: 10px;       /* 🔹 espacio entre ícono y texto */
+  transition: fill 0.3s ease;
+}
+
+/* Opcional: efecto al pasar el mouse por el logo */
+.logo:hover svg {
+  fill: var(--btn);
+}
+
+.nav-links a i {
+    margin-right: 5px;         /* separa el ícono del texto */
+    vertical-align: middle;    /* alinea con el texto */
+    font-size: 1rem;           /* tamaño del ícono */
+    color: var(--letras);      /* mismo color que los enlaces */
+}
+
+
+/*---rectangle-----*/
+/* ---------- HERO ---------- */
+.hero {
+    position: relative; /* necesario para position: absolute de los pasteles */
     height: 850px;
     text-align: center;
     padding: 12rem 2rem;
-    background: #FBC5C5;
-    background: radial-gradient(circle, rgba(251, 197, 197, 1) 0%, rgba(149, 117, 117, 1) 100%);
-  }
-  .hero::after {
+   background: #FBC5C5;
+background: radial-gradient(circle, rgba(251, 197, 197, 1) 0%, rgba(149, 117, 117, 1) 100%);
+}
+
+/* Rectángulo blanco detrás de los pasteles */
+.hero::after {
     content: "";
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     height: 200px;
-    background-color: white;z-index: 1;
-  }
-  .cakes img {
+    background-color: white;
+    z-index: 1; /* atrás de los pasteles */
+}
+
+/* ---------- CAKES ---------- */
+.cakes img {
     max-width: 90%;
     position: absolute;
+     /* altura sobre el rectángulo */
     width: 300px;
-    border-radius: none;
-    z-index: 2;
-    filter: drop-shadow(0px 0px 25px rgba(0, 0, 0, 0.35));
+    border-radius: none; /* sombra envolvente circular */
+   z-index: 2;
+filter: drop-shadow(0px 0px 25px rgba(0, 0, 0, 0.35));
     -webkit-filter: drop-shadow(10px 16px 12px rgba(0, 0, 0, 0.55));
-  }
-  .cake-left {
+     
+}
+
+/* Posiciones individuales */
+.cake-left {
     left: 1%;
     width: 300px !important;
     bottom: 100px;
     z-index: 3;
-  }
-  .cake-center {
+}
+
+.cake-center {
     left: 20%;
-    transform: translateX(-10%);width: 240px !important;
+    transform: translateX(-10%);
+    width: 240px !important;
     bottom: 60px;
-  }
-  .cake-right {
+}
+
+.cake-right {
     right: 0%;
     width: 600px !important;
     bottom: 60px;
-  }
-  .hero {
+}/*
+//////////////////////////////
+
+
+
+
+
+
+
+
+/* ---------- HERO SECTION ---------- */
+.hero {
     height: 850px;
     text-align: center;
     padding: 12rem 2rem;
-    background: #f0cccc;
-    background: radial-gradient(circle, rgba(240, 204, 204, 1) 0%, rgba(153, 125, 125, 1) 100%);
+background: #f0cccc;
+background: radial-gradient(circle, rgba(240, 204, 204, 1) 0%, rgba(153, 125, 125, 1) 100%);
     position: relative;
-  }
-  .hero-text h2 {
-    font-family: 'Great Vibes', cursive;font-size: 5rem;color: var(--letras);
-    text-shadow: 3px 3px 5px rgba(0,0,0,0.2);line-height: 1.2;
-  }
-  .hero-text h2 {
+    
+}
+
+
+.hero-text h2 {
+    font-family: 'Great Vibes', cursive; /* misma fuente que el logo */
+    font-size: 5rem;                     /* ajusta según tu diseño */
+    color: var(--letras);
+    text-shadow: 3px 3px 5px rgba(0,0,0,0.2); /* sombra suave */
+    line-height: 1.2;                    /* espacio entre líneas */
+}
+.hero-text h2 {
     letter-spacing: 0.5px;
     text-shadow: 4px 4px 6px rgba(0,0,0,0.2);
-  }
-  .hero-text p {
+}
+.hero-text p {
     color: var(--letras);
     margin-bottom: 2rem;
-  }
-  .btn {
-    background-color: var(--letras);
+}
+
+.btn {
+    background-color: var(--btn);
     color: white;
     padding: 0.8rem 1.5rem;
     border-radius: 8px;
@@ -143,71 +204,85 @@
     font-weight: 600;
     transition: background 0.3s;
     border-radius: 55px;
-  }
-  .btn:hover {
+}
+
+
+.btn:hover {
     background-color:var(--letras);
-  }
-  .cakes {
+}
+
+/* ---------- CAKES ---------- */
+.cakes {
     display: flex;
     justify-content: center;
     align-items: flex-end;
     gap: 2rem;
     margin-top: 3rem;
-  }
-  .cake-left {
-    transform: translateY(10px);
-  }
-  .cake-center {
-    transform: translateY(40px);
-  }
-  .cake-right {
-    transform: translateY(10px);
-  }
-  .catalogo {
+    
+}
+
+
+
+/* Ajusta según las imágenes */
+.cake-left { transform: translateY(10px); }
+.cake-center { transform: translateY(40px); }
+.cake-right { transform: translateY(10px); }
+
+/* ---------- CATALOGO ---------- */
+.catalogo {
     padding: 14rem 2rem;
     text-align: center;
     background-color: #fff;
-  }
-  .catalogo h2 {
+}
+
+.catalogo h2 {
     font-size: 2.5rem;
     color: #6b3046;
     margin-bottom: 3rem;
     letter-spacing: 2px;
-  }
-  .catalogo-grid {
+}
+
+.catalogo-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 4rem;justify-items: center;
-  }
-  .producto {
-    padding: 1rem;
+    gap: 4rem;
+    justify-items: center;
+    
+}
+
+.producto {
+     padding: 1rem;
     background-color: #fff;
     border-radius: 12px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
- .producto img {
-  width: 250px;       /* Ancho fijo igual al pastel rosa vintage */
-  height: 250px;      /* Alto fijo igual al pastel rosa vintage */
-  object-fit: cover;  /* Mantiene proporción y recorta si es necesario */
-  border-radius: 12px;
-  margin: 0 auto 1rem;
-  display: block;
-  filter: drop-shadow(0 8px 22px rgba(0,0,0,0.33));
 }
-  .producto h3 {
+
+.producto img {
+     width: 250px;  /* antes 220px */
+    height: 250px; /* antes 220px */
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.4); /* 👈 sombra gris pronunciada */
+}
+
+
+.producto h3 {
     color: #5a2c3a;
     font-size: 1rem;
     margin-bottom: 0.4rem;
-  }
-  .precio {
+}
+
+.precio {
     color: #8b4b5e;
     font-weight: 600;
     margin-bottom: 1rem;
-  }
-  .producto .btn {
+}
+
+.producto .btn {
     display: inline-block;
-    background-color: var(--letras);
+    background-color: #f3a8b8;
     color: white;
     padding: 0.6rem 1.3rem;
     border-radius: 20px;
@@ -215,154 +290,18 @@
     font-weight: 600;
     font-size: 0.9rem;
     transition: background 0.3s;
-  }
-  .producto .btn:hover {
+}
+
+.producto .btn:hover {
     background-color: #e26b8f;
-  }.producto:hover {
+}
+
+.producto:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 15px rgba(0,0,0,0.1);
-  }
-  /*cel*/
-  @media (max-width: 767px)
-   {
-    .nav-links {display: none;}
-    .navbar .logo {
-    display: block;
-    font-size: 1.9rem;
-    text-align: center;
-    margin: .5rem auto 0;
-    position: relative;
-  }
-  .navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: .6rem 1rem;
-    background-color: var(--card);
-    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-  }
-  .hero {
-    padding: 6rem 1rem 2rem;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-  }
-  .hero-text {
-    position: relative;
-    margin-top: 120px;
-    z-index: 3;
-  }
-  .hero-text h2 {
-    font-size: 3.7rem;
-    text-shadow: 4px 5px 8px rgba(0,0,0,0.32);
-    z-index: 3;
-    position: relative;
-  }
-  .hero-text p, .btn {
-    z-index: 3;
-    position: relative;
-  }
-  .cakes {
-    position: relative;
-    width: 100%;
-    height: 420px;
-  }
-  .cake-left {
-    position: absolute;
-    width: 250px !important;
-    left: 25%;
-    bottom: 380px;
-    transform: translateX(-50%) rotate(-12deg);
-    z-index: 1;
-    opacity: 1;
-    
-  }
-  .cake-right {
-    
-    position: absolute;
-    width: 380px !important;
-    right: -30px;
-    bottom: 90px;
-    z-index: 3;
-    opacity: 1;
-    filter: drop-shadow(0 6px 14px rgba(0,0,0,0.25));
-  }
-  .cake-center {
-    display: none;
-  }
-  .hero::after {
-    height: 250px;bottom: -5px;
-  }
-  .catalogo-grid {
-    grid-template-columns: 1fr;
-    max-width: 420px;
-  }
-  .btn {
-    padding: 0.6rem 1.3rem;
-    font-size: 0.95rem;
-  }
-  
-  /*tablet*/
-}@media (min-width: 768px) and (max-width: 1024px) {
-  .nav-links{
-    display: none;
-  }
-  .navbar .logo {
-    display: block;
-    font-size: 1.9rem;
-    text-align: center;
-    margin: .5rem auto 0;
-    position: relative;
-  }
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.2rem 2rem;
-  }
-  .logo {
-    font-size: 2.3rem;
-  }
-  .hero {
-    padding: 7rem 2rem 2rem;
-    text-align: center;
-    position: relative;
-  }
-  .hero-text h2 {
-    font-size: 5.4rem;
-    text-shadow: 5px 6px 9px rgba(0,0,0,0.34);
-  }
-  .hero-text p {
-    font-size: 1.1rem;
-  }
-  .cakes img {
-    position: absolute;
-    
-  }
-  .cake-center {
-    display: block;
-    left: 6%;
-    bottom: 80px;
-    width: 270px !important;
-  }
-  .cake-left {
-    display: none;
-  }
-  .cake-right {
-    display: block;
-    right: 4%;
-    bottom: 60px;
-    width: 430px !important;
-  }
-  .catalogo-grid {
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 900px;
-  }
-  .producto img {
-     width: 250px;
-    height: 250px;
-    object-fit: cover;
-    filter: drop-shadow(0 8px 22px rgba(0,0,0,0.33));
-  }
 }
+html {
+  scroll-behavior: smooth;
+}
+
 
