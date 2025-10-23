@@ -16,149 +16,199 @@
           href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;600&display=swap">
   </noscript>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background-color: #fff;
-      color: #894962;
-      scroll-behavior: smooth; /* 🌸 Desplazamiento suave */
-    }
-
-    .navbar, .hero, .logo {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .navbar {
-      padding: 1.2rem 2rem;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-      background: #fff;
-    }
-
-    .logo {
-      font-family: 'Great Vibes', cursive;
-      font-size: 1.8rem;
-      color: #894962;
-    }
-
-    .hero {
-      height: 70vh;
-      background: radial-gradient(circle, rgba(251,197,197,1) 0%, rgba(149,117,117,1) 100%);
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 2rem;
-    }
-  </style>
-
   <link rel="stylesheet" href="./css/main.min.css">
   <link rel="stylesheet" href="./css/mediaquerys.css">
-
   <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous"
         referrerpolicy="no-referrer" />
+
+  <style>
+    /* Estilos para modal de contacto */
+    #contactoModal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+    #contactoModal .modal-content {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 15px;
+      max-width: 500px;
+      width: 90%;
+      position: relative;
+      text-align: center;
+    }
+    #contactoModal .modal-content h2 {
+      margin-bottom: 1rem;
+      font-family: 'Great Vibes', cursive;
+      font-size: 2rem;
+      color: #894962;
+    }
+    #contactoModal .modal-content label {
+      display: block;
+      margin-top: 1rem;
+      margin-bottom: 0.3rem;
+      text-align: left;
+    }
+    #contactoModal .modal-content input,
+    #contactoModal .modal-content textarea {
+      width: 100%;
+      padding: 0.6rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-bottom: 0.5rem;
+      font-family: 'Poppins', sans-serif;
+    }
+    #contactoModal .modal-content button {
+      margin-top: 1rem;
+      padding: 0.7rem 1.5rem;
+      background: #F09BA2;
+      border: none;
+      color: #fff;
+      font-weight: 600;
+      border-radius: 55px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    #contactoModal .modal-content button:hover {
+      background: #894962;
+    }
+    #contactoModal .close-modal {
+      position: absolute;
+      top: 10px; right: 15px;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: #894962;
+    }
+  </style>
 </head>
-
-
-
 
 <body>
 
-
-
-    <header>
+<header>
   <nav class="navbar">
     <!-- Enlaces izquierdos -->
     <ul class="nav-links nav-left">
-      <li><a href="#inicio"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M341.8 72.6C329.5 61.2 310.5 61.2 298.3 72.6L74.3 280.6C64.7 289.6 61.5 303.5 66.3 315.7C71.1 327.9 82.8 336 96 336L112 336L112 512C112 547.3 140.7 576 176 576L464 576C499.3 576 528 547.3 528 512L528 336L544 336C557.2 336 569 327.9 573.8 315.7C578.6 303.5 575.4 289.5 565.8 280.6L341.8 72.6zM304 384L336 384C362.5 384 384 405.5 384 432L384 528L256 528L256 432C256 405.5 277.5 384 304 384z"/></svg> INICIO</a></li>
-      <li><a href="#contacto"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M320 312C386.3 312 440 258.3 440 192C440 125.7 386.3 72 320 72C253.7 72 200 125.7 200 192C200 258.3 253.7 312 320 312zM290.3 368C191.8 368 112 447.8 112 546.3C112 562.7 125.3 576 141.7 576L498.3 576C514.7 576 528 562.7 528 546.3C528 447.8 448.2 368 349.7 368L290.3 368z"/></svg> CONTACTO</a></li>
+      <li><a href="#inicio"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M341.8 72.6C329.5 61.2 310.5 61.2 298.3 72.6L74.3 280.6C64.7 289.6 61.5 303.5 66.3 315.7C71.1 327.9 82.8 336 96 336L112 336L112 512C112 547.3 140.7 576 176 576L464 576C499.3 576 528 547.3 528 512L528 336L544 336C557.2 336 569 327.9 573.8 315.7C578.6 303.5 575.4 289.5 565.8 280.6L341.8 72.6zM304 384L336 384C362.5 384 384 405.5 384 432L384 528L256 528L256 432C256 405.5 277.5 384 304 384z"/></svg> INICIO</a></li>
+      <li><a href="#" id="abrirModal"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M320 312C386.3 312 440 258.3 440 192C440 125.7 386.3 72 320 72C253.7 72 200 125.7 200 192C200 258.3 253.7 312 320 312zM290.3 368C191.8 368 112 447.8 112 546.3C112 562.7 125.3 576 141.7 576L498.3 576C514.7 576 528 562.7 528 546.3C528 447.8 448.2 368 349.7 368L290.3 368z"/></svg> CONTACTO</a></li>
     </ul>
 
     <!-- Logo central -->
-  <h1 class="logo">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
-                <path d="M182.4 53.5L157.8 95.6C154 102.1 152 109.6 152 117.2L152 120C152 142.1 169.9 160 192 160C214.1 160 232 142.1 232 120L232 117.2C232 109.6 230 102.2 226.2 95.6L201.6 53.5C199.6 50.1 195.9 48 192 48C188.1 48 184.4 50.1 182.4 53.5zM310.4 53.5L285.8 95.6C282 102.1 280 109.6 280 117.2L280 120C280 142.1 297.9 160 320 160C342.1 160 360 142.1 360 120L360 117.2C360 109.6 358 102.2 354.2 95.6L329.6 53.5C327.6 50.1 323.9 48 320 48C316.1 48 312.4 50.1 310.4 53.5zM413.8 95.6C410 102.1 408 109.6 408 117.2L408 120C408 142.1 425.9 160 448 160C470.1 160 488 142.1 488 120L488 117.2C488 109.6 486 102.2 482.2 95.6L457.6 53.5C455.6 50.1 451.9 48 448 48C444.1 48 440.4 50.1 438.4 53.5L413.8 95.6zM224 224C224 206.3 209.7 192 192 192C174.3 192 160 206.3 160 224L160 277.5C122.7 290.6 96 326.2 96 368L96 388.8C116.9 390.1 137.6 396.1 156.3 406.8L163.4 410.9C189.7 425.9 222.3 424.3 247 406.7C290.7 375.5 349.3 375.5 393 406.7C417.6 424.3 450.3 426 476.6 410.9L483.7 406.8C502.4 396.1 523 390.1 544 388.8L544 368C544 326.2 517.3 290.6 480 277.5L480 224C480 206.3 465.7 192 448 192C430.3 192 416 206.3 416 224L416 272L352 272L352 224C352 206.3 337.7 192 320 192C302.3 192 288 206.3 288 224L288 272L224 272L224 224zM544 437C531.3 438.2 518.9 442 507.5 448.5L500.4 452.6C457.8 476.9 405 474.3 365.1 445.8C338.1 426.5 301.9 426.5 274.9 445.8C235 474.3 182.2 477 139.6 452.6L132.5 448.5C121.1 442 108.7 438.1 96 437L96 512C96 547.3 124.7 576 160 576L480 576C515.3 576 544 547.3 544 512L544 437z"/>
-              </svg>
-              Dulce Encanto
-            </h1>
-
+    <h1 class="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+        <path d="M182.4 53.5L157.8 95.6C154 102.1 152 109.6 152 117.2L152 120C152 142.1 169.9 160 192 160C214.1 160 232 142.1 232 120L232 117.2C232 109.6 230 102.2 226.2 95.6L201.6 53.5C199.6 50.1 195.9 48 192 48C188.1 48 184.4 50.1 182.4 53.5zM310.4 53.5L285.8 95.6C282 102.1 280 109.6 280 117.2L280 120C280 142.1 297.9 160 320 160C342.1 160 360 142.1 360 120L360 117.2C360 109.6 358 102.2 354.2 95.6L329.6 53.5C327.6 50.1 323.9 48 320 48C316.1 48 312.4 50.1 310.4 53.5zM413.8 95.6C410 102.1 408 109.6 408 117.2L408 120C408 142.1 425.9 160 448 160C470.1 160 488 142.1 488 120L488 117.2C488 109.6 486 102.2 482.2 95.6L457.6 53.5C455.6 50.1 451.9 48 448 48C444.1 48 440.4 50.1 438.4 53.5L413.8 95.6zM224 224C224 206.3 209.7 192 192 192C174.3 192 160 206.3 160 224L160 277.5C122.7 290.6 96 326.2 96 368L96 388.8C116.9 390.1 137.6 396.1 156.3 406.8L163.4 410.9C189.7 425.9 222.3 424.3 247 406.7C290.7 375.5 349.3 375.5 393 406.7C417.6 424.3 450.3 426 476.6 410.9L483.7 406.8C502.4 396.1 523 390.1 544 388.8L544 368C544 326.2 517.3 290.6 480 277.5L480 224C480 206.3 465.7 192 448 192C430.3 192 416 206.3 416 224L416 272L352 272L352 224C352 206.3 337.7 192 320 192C302.3 192 288 206.3 288 224L288 272L224 272L224 224zM544 437C531.3 438.2 518.9 442 507.5 448.5L500.4 452.6C457.8 476.9 405 474.3 365.1 445.8C338.1 426.5 301.9 426.5 274.9 445.8C235 474.3 182.2 477 139.6 452.6L132.5 448.5C121.1 442 108.7 438.1 96 437L96 512C96 547.3 124.7 576 160 576L480 576C515.3 576 544 547.3 544 512L544 437z"/>
+      </svg>
+      Dulce Encanto
+    </h1>
 
     <!-- Enlaces derechos -->
     <ul class="nav-links nav-right">
-      <li><a href="#menu"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M96 160C96 142.3 110.3 128 128 128L512 128C529.7 128 544 142.3 544 160C544 177.7 529.7 192 512 192L128 192C110.3 192 96 177.7 96 160zM96 320C96 302.3 110.3 288 128 288L512 288C529.7 288 544 302.3 544 320C544 337.7 529.7 352 512 352L128 352C110.3 352 96 337.7 96 320zM544 480C544 497.7 529.7 512 512 512L128 512C110.3 512 96 497.7 96 480C96 462.3 110.3 448 128 448L512 448C529.7 448 544 462.3 544 480z"/></svg></i>MENÚ</a></li>
-      <li><a href="#catalogo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M256 144C256 108.7 284.7 80 320 80C355.3 80 384 108.7 384 144L384 192L256 192L256 144zM208 192L144 192C117.5 192 96 213.5 96 240L96 448C96 501 139 544 192 544L448 544C501 544 544 501 544 448L544 240C544 213.5 522.5 192 496 192L432 192L432 144C432 82.1 381.9 32 320 32C258.1 32 208 82.1 208 144L208 192zM232 240C245.3 240 256 250.7 256 264C256 277.3 245.3 288 232 288C218.7 288 208 277.3 208 264C208 250.7 218.7 240 232 240zM384 264C384 250.7 394.7 240 408 240C421.3 240 432 250.7 432 264C432 277.3 421.3 288 408 288C394.7 288 384 277.3 384 264z"/></svg>VER CATÁLOGO</a></li>
+      <li><a href="#menu"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M96 160C96 142.3 110.3 128 128 128L512 128C529.7 128 544 142.3 544 160C544 177.7 529.7 192 512 192L128 192C110.3 192 96 177.7 96 160zM96 320C96 302.3 110.3 288 128 288L512 288C529.7 288 544 302.3 544 320C544 337.7 529.7 352 512 352L128 352C110.3 352 96 337.7 96 320zM544 480C544 497.7 529.7 512 512 512L128 512C110.3 512 96 497.7 96 480C96 462.3 110.3 448 128 448L512 448C529.7 448 544 462.3 544 480z"/></svg> MENÚ</a></li>
+      <li><a href="#catalogo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M256 144C256 108.7 284.7 80 320 80C355.3 80 384 108.7 384 144L384 192L256 192L256 144zM208 192L144 192C117.5 192 96 213.5 96 240L96 448C96 501 139 544 192 544L448 544C501 544 544 501 544 448L544 240C544 213.5 522.5 192 496 192L432 192L432 144C432 82.1 381.9 32 320 32C258.1 32 208 82.1 208 144L208 192zM232 240C245.3 240 256 250.7 256 264C256 277.3 245.3 288 232 288C218.7 288 208 277.3 208 264C208 250.7 218.7 240 232 240zM384 264C384 250.7 394.7 240 408 240C421.3 240 432 250.7 432 264C432 277.3 421.3 288 408 288C394.7 288 384 277.3 384 264z"/></svg> VER CATÁLOGO</a></li>
     </ul>
   </nav>
 </header>
 
+<section class="hero">
+  <div class="hero-text">
+    <h2>La magia está<br> en cada bocado</h2>
+    <p>Endulza tus momentos con nuestros postres caseros</p>
+    <a href="#catalogo" class="btn">Ordena ahora</a>
+  </div>
+  <div class="cakes">
+    <picture><img src="./img/cake1 (1).webp" alt="Pastel 1" class="cake-left" fetchpriority="high" decoding="async"></picture>
+    <picture><img src="./img/cake2.webp" alt="Pastel 2" class="cake-center" loading="lazy"></picture>
+    <picture><img src="./img/cake3.webp" alt="Pastel 3" class="cake-right" loading="lazy"></picture>
+  </div>
+</section>
 
-    
+<section id="catalogo" class="catalogo">
+  <h2>CATÁLOGO</h2>
+  <div class="catalogo-grid">
+    <div class="producto">
+      <picture><img src="./img/pastel1.webp" alt="Pastel Elegancia Rosa" loading="lazy"></picture>
+      <h3>Pastel Elegancia Rosa</h3>
+      <p class="precio">$480</p>
+      <a href="#" class="btn">Ordenar ahora</a>
+    </div>
+    <div class="producto">
+      <picture><img src="./img/pastel2.webp" alt="Pastel Corazón Clásico" loading="lazy"></picture>
+      <h3>Pastel Corazón Clásico</h3>
+      <p class="precio">$450</p>
+      <a href="#" class="btn">Ordenar ahora</a>
+    </div>
+    <div class="producto">
+      <picture><img src="./img/pastel3.webp" alt="Pastel Azul Encanto" loading="lazy"></picture>
+      <h3>Pastel Azul Encanto</h3>
+      <p class="precio">$500</p>
+      <a href="#" class="btn">Ordenar ahora</a>
+    </div>
+    <div class="producto">
+      <picture><img src="./img/Pastel4.webp" alt="Pastel Rosas Vintage" loading="lazy"></picture>
+      <h3>Pastel Rosas Vintage</h3>
+      <p class="precio">$470</p>
+      <a href="#" class="btn">Ordenar ahora</a>
+    </div>
+  </div>
+</section>
 
-    <section class="hero">
-        <div class="hero-text">
-           <h2>La magia está<br> en cada bocado</h2>
-            <p>Endulza tus momentos con nuestros postres caseros</p>
-            <a href="#catalogo" class="btn">Ordena ahora</a>
-        </div>
-        <div class="cakes">
-          <picture>
-            <img src="./img/cake1 (1).webp" alt="Pastel 1" class="cake-left" fetchpriority="high" decoding="async">
-          </picture>
-          <picture>
-            <img src="./img/cake2.webp" alt="Pastel 2" class="cake-center" loading="lazy">
-          </picture>
-          <picture>
-            <img src="./img/cake3.webp" alt="Pastel 3" class="cake-right" loading="lazy">
-          </picture>
-        </div>
-    </section>
+<!-- Modal de Contacto -->
+<div id="contactoModal">
+  <div class="modal-content">
+    <span class="close-modal">&times;</span>
+    <h2>Contacto</h2>
+    <form>
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
+      
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="email" required>
+      
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+      
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+</div>
 
-    <section id="catalogo" class="catalogo">
-      <h2>CATÁLOGO</h2>
-      <div class="catalogo-grid">
-        <div class="producto">
-          <picture><img src="./img/pastel1.webp" alt="Pastel Elegancia Rosa" loading="lazy"></picture>
-          <h3>Pastel Elegancia Rosa</h3>
-          <p class="precio">$480</p>
-          <a href="#" class="btn">Ordenar ahora</a>
-        </div>
-        <div class="producto">
-          <picture><img src="./img/pastel2.webp" alt="Pastel Corazón Clásico" loading="lazy"></picture>
-          <h3>Pastel Corazón Clásico</h3>
-          <p class="precio">$450</p>
-          <a href="#" class="btn">Ordenar ahora</a>
-        </div>
-        <div class="producto">
-          <picture><img src="./img/pastel3.webp" alt="Pastel Azul Encanto" loading="lazy"></picture>
-          <h3>Pastel Azul Encanto</h3>
-          <p class="precio">$500</p>
-          <a href="#" class="btn">Ordenar ahora</a>
-        </div>
-        <div class="producto">
-          <picture><img src="./img/Pastel4.webp" alt="Pastel Rosas Vintage" loading="lazy"></picture>
-          <h3>Pastel Rosas Vintage</h3>
-          <p class="precio">$470</p>
-          <a href="#" class="btn">Ordenar ahora</a>
-        </div>
-      </div>
-    </section>
+<!-- Script para modal y scroll suave -->
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(enlace => {
+    enlace.addEventListener('click', e => {
+      e.preventDefault();
+      const destino = document.querySelector(enlace.getAttribute('href'));
+      if(destino){
+        destino.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
 
-    <!-- 💫 Script solo para scroll suave -->
-    <script>
-      document.querySelectorAll('a[href^="#"]').forEach(enlace => {
-        enlace.addEventListener('click', e => {
-          e.preventDefault();
-          const destino = document.querySelector(enlace.getAttribute('href'));
-          if(destino){
-            destino.scrollIntoView({ behavior: 'smooth' });
-          }
-        });
-      });
-    </script>
+  // Modal de contacto
+  const modal = document.getElementById('contactoModal');
+  const abrir = document.getElementById('abrirModal');
+  const cerrar = document.querySelector('.close-modal');
+
+  abrir.addEventListener('click', e => {
+    e.preventDefault();
+    modal.style.display = 'flex';
+  });
+
+  cerrar.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+
+  window.addEventListener('click', e => {
+    if(e.target === modal) modal.style.display = 'none';
+  });
+</script>
+
 </body>
 </html>

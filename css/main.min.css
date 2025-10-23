@@ -300,8 +300,5 @@ background: radial-gradient(circle, rgba(240, 204, 204, 1) 0%, rgba(153, 125, 12
     transform: translateY(-5px);
     box-shadow: 0 8px 15px rgba(0,0,0,0.1);
 }
-html {
-  scroll-behavior: smooth;
-}
 
 
