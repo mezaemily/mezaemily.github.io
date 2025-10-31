@@ -27,6 +27,6 @@ window.onload = ()=>{
     });
  
 
-     peice = 34
+     
     }
 }//llave on load
