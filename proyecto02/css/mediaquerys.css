@@ -1,0 +1,183 @@
+/* =========================
+   📱 CELULAR: hasta 767px
+   ========================= */
+@media (max-width: 767px) {
+
+  /* Header */
+  .nav-links { display: none; }
+  .navbar .logo {
+    display: block;
+    font-size: 1.9rem;
+    text-align: center;
+    margin: .5rem auto 0;
+    position: relative;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .6rem 1rem;
+    background-color: var(--card);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  }
+
+  /* HERO */
+  .hero {
+    padding: 6rem 1rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  /* Texto del hero más abajo */
+.hero-text {
+  position: relative;
+  margin-top: 120px; /* 🔽 baja todo el bloque de texto */
+  z-index: 3;
+}
+
+
+  .hero-text h2 {
+    font-size: 3.7rem;
+    text-shadow: 4px 5px 8px rgba(0,0,0,0.32);
+    z-index: 3;
+    position: relative;
+  }
+
+  .hero-text p,
+  .btn {
+    z-index: 3;
+    position: relative;
+  }
+
+  /* 🍰 Contenedor de pasteles */
+  .cakes {
+    position: relative;
+    width: 100%;
+    height: 420px;
+  }
+
+  /*  Cake-left debajo del texto (detrás de las letras) */
+  .cake-left {
+    position: absolute;
+    width: 250px !important;
+    left: 25%;
+    bottom: 380px;
+    transform: translateX(-50%) rotate(-12deg);
+    z-index: 1; /* detrás del texto */
+    opacity: 1;
+    filter: drop-shadow(0 6px 14px rgba(0,0,0,0.25));
+  }
+
+  /* 🍫 Cake-right visible sobre el rectángulo blanco */
+ /* 🍫 Cake-right visible sobre el rectángulo blanco */
+.cake-right {
+  position: absolute;
+  width: 380px !important;
+  right: -30px; /* ← antes era 10%, ahora totalmente pegado */
+  bottom: 80px;
+  
+  z-index: 3; /* encima del rectángulo */
+  opacity: 1;
+  filter: drop-shadow(0 6px 14px rgba(0,0,0,0.25));
+}
+
+
+ 
+  .cake-center { display: none; }
+
+  /* Rectángulo blanco inferior */
+  .hero::after {
+    height: 250px;
+    bottom: -5px;
+  }
+
+  /* Catálogo en una sola columna */
+  .catalogo-grid {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+  }
+
+  .btn {
+    padding: 0.6rem 1.3rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* =========================
+   💻 TABLET: 768px - 1024px
+   ========================= */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .nav-links{display: none;}
+   .navbar .logo {
+    display: block;
+    font-size: 1.9rem;
+    text-align: center;
+    margin: .5rem auto 0;
+    position: relative;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 2rem;
+  }
+
+  .logo {
+    font-size: 2.3rem;
+  }
+
+  .hero {
+    padding: 7rem 2rem 2rem;
+    text-align: center;
+    position: relative;
+  }
+
+  .hero-text h2 {
+    font-size: 5.4rem;
+    text-shadow: 5px 6px 9px rgba(0,0,0,0.34);
+  }
+
+  .hero-text p {
+    font-size: 1.1rem;
+  }
+
+  /*  Pasteles a los lados del texto */
+  .cakes img {
+    position: absolute;
+    filter: drop-shadow(0 8px 22px rgba(0,0,0,0.33));
+  }
+
+  .cake-center {
+    display: block;
+    left: 6%;
+    bottom: 0px;
+    width: 270px !important;
+    
+    
+  }
+
+  .cake-left { display: none; }
+
+  .cake-right {
+    display: block;
+    right: 0%;
+    bottom: 0px;
+    width: 430px !important;
+   
+   
+  }
+
+  /* Catálogodos columnas */
+  .catalogo-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 900px;
+  }
+
+  .producto img {
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+  }
+}
